@@ -16,6 +16,12 @@ Este projeto demonstra uma página web simples e responsiva, utilizando tags sem
 
 ## Estrutura do Projeto
 
+![image](https://github.com/user-attachments/assets/3dc77291-2de2-4e07-96bd-1f4d9ed8e5a7)
+
+![image](https://github.com/user-attachments/assets/7c9d4377-0268-4f7d-a434-32c36f76a076)
+
+
+
 - **`<header>`**: Contém o título da página e o ícone do menu hambúrguer.
 - **`<nav>`**: Menu de navegação com links para diferentes seções. Em telas pequenas, o menu é escondido atrás do ícone hambúrguer.
 - **`<main>`**: Inclui o conteúdo principal da página, dividido entre `<article>` com o texto principal e `<aside>` com informações adicionais.
