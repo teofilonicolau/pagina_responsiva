@@ -122,6 +122,7 @@
             padding: 20px;
             background-color: rgb(183, 183, 226);
             color: white;
+            border-radius: 8px;
         }
 
         section {
@@ -151,6 +152,35 @@
             article, aside {
                 margin: 0;
             }
+        }
+
+        /* Estilo para o formulário da newsletter */
+        .newsletter-form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .newsletter-form input[type="email"] {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            width: 80%;
+        }
+
+        .newsletter-form button {
+            padding: 10px;
+            background-color: blue;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            width: 85%;
+        }
+
+        .newsletter-form button:hover {
+            background-color: darkblue;
         }
 
     </style>
@@ -184,8 +214,13 @@
             </section>
         </article>
         <aside>
-            <h3>Informações Adicionais</h3>
-            <p>Este é o conteúdo da barra lateral (aside), onde se pode adicionar links, widgets ou outras informações relevantes.</p>
+            <h3>Inscreva-se para novidades!</h3>
+            <p>Receba atualizações diretamente no seu e-mail.</p>
+
+            <form class="newsletter-form">
+                <input type="email" placeholder="Digite seu e-mail" required>
+                <button type="submit">Inscrever-se</button>
+            </form>
         </aside>
     </main>
     <footer>
