@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Semântica e Responsiva com Menu Hambúrguer</title>
+    <style>
+        /*reset bssico*/
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /*estilo geral*/
+        html, body {
+            height: 100%;
+        }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: rgb(183, 183, 226);
+            color: white;
+            padding: 10px;
+            text-align: center;
+            position: relative;
+        }
+
+        nav {
+            margin: 10px;
+            padding: 10px;
+            text-align: end;
+        }
+
+        nav a {
+            color: white;
+            font-weight: bolder;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: blue;
+            text-decoration: underline;
+        }
+
+        /* Menu hamburguer (icone) */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .hamburger div {
+            width: 25px;
+            height: 3px;
+            background-color: white;
+            margin: 4px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .nav-links a {
+            margin-left: 15px;
+        }
+
+        /* Estilo do menu para telas menores */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                background-color: rgb(183, 183, 226);
+                position: absolute;
+                right: 10px;
+                top: 60px;
+                width: 200px;
+                padding: 10px;
+                border-radius: 8px;
+            }
+
+            .nav-links.show {
+                display: flex;
+            }
+
+            .hamburger {
+                display: flex;
+                position: absolute;
+                top: 10px;
+                right: 10px;
+            }
+
+            nav {
+                text-align: right;
+            }
+        }
+
+        /*Restante do layout*/
+        main {
+            display: flex;
+            flex: 1;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+        
+        article {
+            flex: 2;
+            padding: 20px;
+            margin-right: 10px;
+        }
+
+        aside {
+            flex: 1;
+            padding: 20px;
+            background-color: rgb(183, 183, 226);
+            color: white;
+        }
+
+        section {
+            margin: 20px;
+        }
+        
+        section img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        
+        footer {
+            background-color: rgb(183, 183, 226);
+            padding: 10px;
+            text-align: center;
+            color: white;
+            margin-top: auto;
+        }
+
+        /*Responsividade*/
+        @media (max-width: 768px) {
+            main {
+                flex-direction: column;
+            }
+
+            article, aside {
+                margin: 0;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Minha Página Semântica</h1>
+        <!-- Ícone do menu hamburguer -->
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <nav>
+            <div class="nav-links">
+                <a href="#">Home</a>
+                <a href="#">Sobre</a>
+                <a href="#">Contato</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <article>
+            <h2>Bem-vindo ao meu site</h2>
+            <p>Este é um exemplo de uma página que utiliza tags semânticas. Estamos usando <code>header</code>, <code>nav</code>, <code>main</code>, <code>article</code>, <code>section</code>, <code>aside</code> e <code>footer</code> para estruturar o conteúdo da página.</p>
+            <section>
+                <h3>Seção com Imagens</h3>
+                <img src="/image/p2.jpg" alt="Imagem de exemplo">
+                <p>Esta seção contém uma imagem que é ajustada automaticamente para o tamanho da tela, garantindo que a página seja responsiva.</p>
+            </section>
+        </article>
+        <aside>
+            <h3>Informações Adicionais</h3>
+            <p>Este é o conteúdo da barra lateral (aside), onde se pode adicionar links, widgets ou outras informações relevantes.</p>
+        </aside>
+    </main>
+    <footer>
+        <p>&copy; 2024 Teofilo Nicolau. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- JavaScript para abrir e fechar o menu hamburguer -->
+    <script>
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('show');
+        }
+    </script>
+</body>
+</html>
