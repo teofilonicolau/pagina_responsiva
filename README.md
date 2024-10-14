@@ -1,6 +1,8 @@
 # Página Semântica e Responsiva com Menu Hambúrguer
 
 Este projeto demonstra uma página web simples e responsiva, utilizando tags semânticas do HTML5 e um menu hambúrguer funcional para melhorar a navegação em dispositivos móveis. O layout é flexível, adaptando-se bem a diferentes tamanhos de tela.
+## Página:
+https://pagina-responsiva-pink.vercel.app/
 
 ## Tecnologias Utilizadas
 
@@ -16,9 +18,11 @@ Este projeto demonstra uma página web simples e responsiva, utilizando tags sem
 
 ## Estrutura do Projeto
 
-![image](https://github.com/user-attachments/assets/3dc77291-2de2-4e07-96bd-1f4d9ed8e5a7)
+![image](https://github.com/user-attachments/assets/e9480c92-1026-4bdc-82ce-b58366d1ebb5)
 
-![image](https://github.com/user-attachments/assets/7c9d4377-0268-4f7d-a434-32c36f76a076)
+
+![image](https://github.com/user-attachments/assets/dc6432d0-a292-4d77-b9d0-7cd0f36e44c2)
+
 
 
 
